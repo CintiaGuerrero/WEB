@@ -5,33 +5,38 @@ html_content = """
 <html lang="ca">
 <head>
   <meta charset="UTF-8" />
-  <title>Pàgina amb imatge de fons</title>
+  <title>Pàgina amb imatge de fons des de GitHub</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
       margin: 0;
-      padding: 0;
+      padding-top: 80px;
       height: 100vh;
-      background-image: url('https://surtdecasa.cat/sites/default/files/imatges-pujades/2019T1/imatges/la-moguda-gastronomica-1-400.jpg');
-      background-size: cover;       /* Ajusta la imatge per cobrir tota la pantalla */
-      background-position: center;  /* Centra la imatge */
-      background-repeat: no-repeat; /* No repeteix la imatge */
-      color: white;                 /* Text blanc perquè contrasti */
+      background-image: url('https://raw.githubusercontent.com/CintiaGuerrero/WEB/main/LaMogoda.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+    }
+    h1 {
+      color: white;
+      margin-bottom: 60px;
+      font-size: 3rem;
     }
     button {
+      background-color: white;
+      color: #f38628;
       padding: 15px 30px;
-      margin: 10px;
-      font-size: 16px;
-      border-radius: 8px;
-      background-color: rgba(0, 123, 255, 0.8);
-      color: white;
+      margin: 15px;
+      font-size: 18px;
       border: none;
+      border-radius: 8px;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
     button:hover {
-      background-color: rgba(0, 86, 179, 0.8);
+      background-color: #f2d9bb;
     }
   </style>
 </head>
