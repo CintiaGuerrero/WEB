@@ -1,36 +1,50 @@
+from IPython.display import HTML
+
+html_content = """
 <!DOCTYPE html>
 <html lang="ca">
 <head>
-  <meta charset="UTF-8">
-  <title>Pàgina amb botons</title>
+  <meta charset="UTF-8" />
+  <title>Pàgina amb imatge de fons</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      margin-top: 100px;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url('https://surtdecasa.cat/sites/default/files/imatges-pujades/2019T1/imatges/la-moguda-gastronomica-1-400.jpg');
+      background-size: cover;       /* Ajusta la imatge per cobrir tota la pantalla */
+      background-position: center;  /* Centra la imatge */
+      background-repeat: no-repeat; /* No repeteix la imatge */
+      color: white;                 /* Text blanc perquè contrasti */
     }
     button {
       padding: 15px 30px;
       margin: 10px;
       font-size: 16px;
       border-radius: 8px;
-      background-color: #007BFF;
+      background-color: rgba(0, 123, 255, 0.8);
       color: white;
       border: none;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
     button:hover {
-      background-color: #0056b3;
+      background-color: rgba(0, 86, 179, 0.8);
     }
   </style>
 </head>
 <body>
 
-  <h1>Benvingut a la meva web!</h1>
+  <h1>Tota la informació sobre la Mogoda Grastronòmica 2025!</h1>
 
-  <button onclick="window.location.href='https://enllac1.cat'">Enllaç 1</button>
-  <button onclick="window.location.href='https://enllac2.cat'">Enllaç 2</button>
-  <button onclick="window.location.href='https://enllac3.cat'">Enllaç 3</button>
+  <button onclick="window.location.href='https://www.lamogudagastronomica.cat/'">Pàgina web</button>
+  <button onclick="window.location.href='https://www.lamogudagastronomica.cat/_files/ugd/72fe8b_80e3981e906941b2b5df2542b0552df5.pdf'">Bases del concurs a la millor cocreta del Vallès</button>
+  <button onclick="window.location.href='https://spin.staperpetua.cat/webServices/views/questionaris/?token=68872790e27b2'">Inscripcions a la millor corqueta!</button>
 
 </body>
 </html>
+"""
+
+display(HTML(html_content))
