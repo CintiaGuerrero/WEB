@@ -2,38 +2,64 @@
 <html lang="ca">
 <head>
   <meta charset="UTF-8" />
-  <title>Pàgina amb imatge de fons des de GitHub</title>
+  <title>Pàgina amb imatge de fons responsive</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
       margin: 0;
-      padding-top: 80px;
-      height: 100vh;
+      padding-top: 60px;
+      min-height: 100vh;
       background-image: url('https://raw.githubusercontent.com/CintiaGuerrero/WEB/main/LaMogoda.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       color: white;
+      box-sizing: border-box;
     }
     h1 {
       color: white;
-      margin-bottom: 60px;
+      margin-bottom: 30px; /* abans era 60px */
       font-size: 3rem;
+      padding: 0 10px;
+    }
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px; /* abans era 20px */
+      width: 90%;
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 0 10px;
     }
     button {
       background-color: white;
       color: #f38628;
-      padding: 15px 30px;
-      margin: 15px;
+      padding: 15px 0;
       font-size: 18px;
       border: none;
       border-radius: 8px;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      width: 100%;
+      text-align: center;
+      display: block;
+      box-sizing: border-box;
     }
     button:hover {
       background-color: #f2d9bb;
+    }
+
+    /* Responsive text size */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+      button {
+        font-size: 16px;
+        padding: 12px 0;
+      }
     }
   </style>
 </head>
@@ -41,9 +67,11 @@
 
   <h1>Tota la informació sobre la Mogoda Grastronòmica 2025!</h1>
 
-  <button onclick="window.location.href='https://www.lamogudagastronomica.cat/'">Pàgina web</button>
-  <button onclick="window.location.href='https://www.lamogudagastronomica.cat/_files/ugd/72fe8b_80e3981e906941b2b5df2542b0552df5.pdf'">Bases del concurs a la millor cocreta del Vallès</button>
-  <button onclick="window.location.href='https://spin.staperpetua.cat/webServices/views/questionaris/?token=68872790e27b2'">Inscripcions a la millor corqueta!</button>
+  <div class="button-container">
+    <button onclick="window.location.href='https://www.lamogudagastronomica.cat/'">Pàgina web</button>
+    <button onclick="window.location.href='https://www.lamogudagastronomica.cat/_files/ugd/72fe8b_80e3981e906941b2b5df2542b0552df5.pdf'">Bases del concurs a la millor cocreta del Vallès</button>
+    <button onclick="window.location.href='https://spin.staperpetua.cat/webServices/views/questionaris/?token=68872790e27b2'">Inscripcions a la millor corqueta!</button>
+  </div>
 
 </body>
 </html>
